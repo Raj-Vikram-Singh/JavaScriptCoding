@@ -44,7 +44,7 @@ var numJewelsInStones = function(J, S) {
         
         for (let k = 0; k< arrayS.length; k++ ){
             
-        if(arrayS[k] == arrayJ[i]){
+        if(arrayS[k] === arrayJ[i]){
             result.push(arrayS[k])
             arrayS.splice(k,1)
             --k

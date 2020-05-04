@@ -44,7 +44,7 @@ var canConstruct = function(ransomNote, magazine) {
             count++
         }
      }
-    if(count == ransomNote.length ){
+    if(count === ransomNote.length ){
         return true
     } else{
         return false
