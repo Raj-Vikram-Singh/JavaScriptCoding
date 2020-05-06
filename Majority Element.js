@@ -42,8 +42,5 @@ var majorityElement = function(nums) {
              return nums[i]
          }
      }
-     
-     return Object.keys(mappingObj).find(item => mappingObj[item] > majorityLength);
-     
-     
+     return Object.keys(mappingObj).find(item => mappingObj[item] > majorityLength); 
  };
