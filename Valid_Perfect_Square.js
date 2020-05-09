@@ -36,3 +36,13 @@ var isPerfectSquare = function(num) {
     return false;
 };
 
+
+// Method 2:
+
+var isPerfectSquare = function(num) {
+  let i = 1;
+  while(i*i < num){
+    i++
+  }
+  return i*i === num;
+}
