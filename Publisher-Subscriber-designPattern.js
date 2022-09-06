@@ -1,5 +1,3 @@
-/* publisher subscriber patter */
-
 const PubSub = function() {
 
   const Subscriber = {};
@@ -10,6 +8,11 @@ const PubSub = function() {
       Subscriber[eventName] = []
     }
     Subscriber[eventName].push(cb); //subsciber subscribes to events and store callbacks in array.
+    return {
+      unsubscribe() { //unsubscribe
+        Subscriber[eventName] = Subscriber[eventName].filter(item => item != cb);
+      }
+    }
   }
 
   const publish = function(eventName, data) {
@@ -29,8 +32,18 @@ const PubSub = function() {
 
 const pubsub = PubSub();
 
-pubsub.subscribe("firstEvent", function(data) {
-	console.log(`this is the ${data} event`)
-});
 
-pubsub.publish("firstEvent", "first"); // consoles => "this is the first event"
+const result = pubsub.subscribe('consoleData', function(data) {
+  console.log("Subscribed", data);
+})
+
+const result2 = pubsub.subscribe('consoleData', function(data) {
+  console.log("Subscribed 2", data);
+})
+
+
+
+pubsub.publish('consoleData', 'This is the data published');
+result.unsubscribe()
+result2.unsubscribe()
+pubsub.publish('consoleData', 'This is the data published 2'); // this data is not consoled as we have unsubscribed both the results.
