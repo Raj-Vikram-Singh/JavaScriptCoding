@@ -47,3 +47,5 @@ pubsub.publish('consoleData', 'This is the data published');
 result.unsubscribe()
 result2.unsubscribe()
 pubsub.publish('consoleData', 'This is the data published 2'); // this data is not consoled as we have unsubscribed both the results.
+
+
