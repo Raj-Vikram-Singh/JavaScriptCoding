@@ -53,3 +53,4 @@ const selectionSort = function(arr, r = arr.length - 1) {
 }
 
 console.log(selectionSort([2, 3, 1, 4, 6, 5]))
+
