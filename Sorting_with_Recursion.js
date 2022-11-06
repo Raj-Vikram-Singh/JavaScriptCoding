@@ -1,4 +1,4 @@
-//Bubble sort using recursion
+//============Bubble sort using recursion=======================
 
 const bubbleSort = function(arr, r = arr.length, c = 0) {
   if (r === 0) {
@@ -20,7 +20,7 @@ const bubbleSort = function(arr, r = arr.length, c = 0) {
 console.log(bubbleSort([2, 3, 1, 4, 6, 5]))
 
 
-//Selection Sort using recursion
+//=============Selection Sort using recursion==========================
 
 const findMax = function(arr, r, index = 0, max = {
   value: -Infinity,
